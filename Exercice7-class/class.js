@@ -32,31 +32,31 @@ class Pokemon {
 }
 
 // Création des deux Pokémons
-const Pikachu = new Pokemon("Pikachu", 20, 15, 90, 0.3);
-const Evoli = new Pokemon("Evoli", 25, 12, 70, 0.4)
+const pikachu = new Pokemon("Pikachu", 20, 15, 90, 0.3);
+const evoli = new Pokemon("Evoli", 25, 12, 70, 0.4)
 
 // Tant que les vies des deux pokémons sont supérieur de 0 je joue
-while(Pikachu.hp > 0 && Evoli.hp > 0) {
+while(pikachu.hp > 0 && evoli.hp > 0) {
     // Je crée une variable qui va récupérer les damage de ma fonction attackPokemon
     // Et du coup j'attaque Evoli
-    const dmgToEvoli = Pikachu.attackPokemon(Evoli);
+    const dmgToEvoli = pikachu.attackPokemon(evoli);
 
     // Ici j'affiche les dégats subit par Evoli et le nombre de PV qu'il lui reste
-    console.log("Evoli a subi " + dmgToEvoli + ", il lui reste " + Evoli.hp + " de PV.");
+    console.log("Evoli a subi " + dmgToEvoli + ", il lui reste " + evoli.hp + " de PV.");
 
     // Si Evoli meurt je déclare un message de mort et j'arrête le jeu
-    if(Evoli.hp <= 0) {
+    if(evoli.hp <= 0) {
         console.log("Evoli est mort");
 
         break;
     }
 
     // Même fonctionnement qu'au dessus pour ce Pokémon
-    const dmgToPikachu = Evoli.attackPokemon(Pikachu);
+    const dmgToPikachu = evoli.attackPokemon(evoli);
 
-    console.log("Pikachu a subi " + dmgToPikachu + ", il lui reste " + Pikachu.hp + " de PV.")
+    console.log("Pikachu a subi " + dmgToPikachu + ", il lui reste " + pikachu.hp + " de PV.")
 
-    if(Pikachu.hp <= 0) {
+    if(pikachu.hp <= 0) {
         console.log("Pikachu est mort");
 
         break;
