@@ -28,7 +28,7 @@ const pikachu = new Pokemon("Pikachu", 20, 15, 90, 0.3);
 const evoli = new Pokemon("Evoli", 25, 12, 70, 0.4)
 
 while (pikachu.hp > 0 && evoli.hp > 0) {
-  const dmgToEvoli = pikachu.attackPokemon(Evoli);
+  pikachu.attackPokemon(evoli);
 
   if (evoli.hp <= 0) {
     console.log(evoli.name + " est mort.");
@@ -36,9 +36,9 @@ while (pikachu.hp > 0 && evoli.hp > 0) {
     break;
   }
 
-  const dmgToPikachu = evoli.attackPokemon(Pikachu);
+  evoli.attackPokemon(pikachu);
 
-  if (Pikachu.hp <= 0) {
+  if (pikachu.hp <= 0) {
     console.log(pikachu.name + " est mort.");
 
     break;
