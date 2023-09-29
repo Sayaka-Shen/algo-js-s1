@@ -16,7 +16,7 @@ class Pokemon {
     if (this.isLucky() === true) {
       const dmg = this.attack - pokemon.defense;
       pokemon.hp -= dmg;
-      console.log(this.name + " a attaqué " + pokemon.name + " pour " + dmg + " dégats. Il a sub")
+      console.log(this.name + " a attaqué " + pokemon.name + " pour " + dmg + " dégats. Il lui reste " + pokemon.hp + ".")
     } else {
       console.log(this.name + " a raté son attaque.")
     }
