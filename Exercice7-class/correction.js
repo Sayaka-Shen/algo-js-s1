@@ -12,6 +12,7 @@ class Pokemon {
   }
 
   attackPokemon(pokemon) {
+    // pas obligatoire === true
     if (this.isLucky() === true) {
       const dmg = this.attack - pokemon.defense;
       pokemon.hp -= dmg;
