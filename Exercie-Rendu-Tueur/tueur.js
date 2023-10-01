@@ -31,8 +31,6 @@ while(jason.pv > 0 && survivors.length > 0) {
         let randomNumber = Math.random()
         console.log(jason.name + " attaque " + survivor.name)
 
-        console.log(survivors.length)
-
         if (randomNumber <= survivor.deathProbability) {
             if (randomNumber <= survivor.damageWhileDyingProbability) {
                 jason.pv -= 15;
